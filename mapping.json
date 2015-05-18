@@ -67,7 +67,7 @@
                     "type": "float"
                 },
                 "Lukt": {
-                    "type": "string"
+                    "type": "string",
                     "copy_to": "lukt_smak"
                 },
                 "lukt_smak": {
