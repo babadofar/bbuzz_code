@@ -1,0 +1,7 @@
+{
+    background_filter: {
+        term: {
+            "Land": "belgia"
+        }
+    }
+}

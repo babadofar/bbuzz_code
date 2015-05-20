@@ -10,7 +10,7 @@
                     "type": "float"
                 },
                 "Argang": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "Bitterhet": {
                     "type": "integer"
@@ -54,7 +54,8 @@
                     "type": "string"
                 },
                 "Lagringsgrad": {
-                    "type": "string"
+                    "type": "string" ,
+                    "index": "not_analyzed"
                 },
                 "Land": {
                     "type": "string",
@@ -73,7 +74,7 @@
                 "lukt_smak": {
                     "type": "string"
                 },
-                
+
                 "Metode": {
                     "type": "string"
                 },
@@ -118,9 +119,16 @@
                 },
                 "Varenavn": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "copy_to" : "Varenavn_raw"
                 },
-                "Varenummer": {
+                "Varenavn_raw": {
+                    "type": "string",
+                    "index": "not_analyzed",
+                    "fielddata": {
+                         "format": "doc_values"
+                    }
+                },
+               "Varenummer": {
                     "type": "integer"
                 },
                 "Varetype": {
