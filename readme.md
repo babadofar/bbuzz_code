@@ -9,6 +9,14 @@ sh getProdukter.sh
 /opt/logstash/bin/logstash agent --verbose -l logstash.log   -f vinMonopoletCsvFileLogstash.conf
 ````
 
+In Kibana:
+
+* Create new index pattern
+* Unselect - Index contains time-based events  
+* type in "vinmonopolet" for index name
+
+
+
 You may want to add the scripted field
 `
 pricePrAlcohol
